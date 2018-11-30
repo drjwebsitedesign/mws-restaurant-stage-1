@@ -21,8 +21,11 @@ initMap = () => {
         zoom: 16,
         scrollWheelZoom: false
       });
+        
+        
+        //ADDED MAPBOX KEY
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: '<your MAPBOX API KEY HERE>',
+        mapboxToken: mapboxKey.mapbox_key,
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -88,6 +91,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
+    
+        //ADD 'CREATE:IMG.ALT ATTRIBUTE' FROM ALEX PEREZ WALKTHRU.
+            image.alt=`Picture of ${restaurant.name}`;
+    
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
