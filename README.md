@@ -1,4 +1,5 @@
 # Mobile Web Specialist Certification Course
+The link to view this app: https://drjwebsitedesign.github.io/mws-restaurant-stage-1/
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
