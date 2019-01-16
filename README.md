@@ -36,7 +36,6 @@ Below are the some of the changes made to pass the project's rubric requirements
 ### Addition of Service Worker cache
 You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. 
 
-* I AM STILL WORKING ON SERVICE WORKER CACHE REQUIREMENTS. LOL (:~)
 
 ## Leaflet.js and Mapbox:
 

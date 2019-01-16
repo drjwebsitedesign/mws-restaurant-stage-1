@@ -9,6 +9,7 @@
 <!--name="viewport" improves responsive web design by forcing the browser to render content based on the width of the device's screen-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="NYC Manhattan Restaurant reviews, hours, addresses, ratings, pictures.">
                
             <!--main stylesheet links includes @media queries for smartphones and tablets-->
     <link rel="stylesheet" href="css/styles.css">           
@@ -21,15 +22,16 @@
 </head>
 
 
-<body>         
-    <header>       
-        <nav>  
+<body>     
+    <!--htmls5 semantic-compatible 'role landmarks' aid accessibility devices-->  
+    <header role="banner">      
+        <nav role="navigation">  
             <h1><a href="/">Restaurant<br>Reviews</a></h1>    
         </nav>
     </header> 
           
-    
-    <main id="maincontent"> 
+    <!--htmls5 semantic-compatible 'role landmarks' aid accessibility devices-->
+    <main id="maincontent" role="main"> 
     <!--the aria-label and role points to the mapbox api-->
         <section id="map-container" aria-label="mapbox maps" role="application">
             <div id="map"></div>
@@ -37,11 +39,12 @@
                
                  
         <section> 
-            <div class="filter-options">
+    <!--htmls5 semantic-compatible 'role landmarks' aid accessibility devices-->
+            <div class="filter-options" role="searchbox">
                 <h2>Filter Results</h2>
                  
                 
-    <!--aria-label improves accessibility to select restaurants by neighborhood and cuisine-->    
+    <!--htmls5 semantic-compatible 'aria-labels' aid accessibility devices-->
             <select id="neighborhoods-select" name="neighborhoods" aria-label="select restaurant by neighborhood" onchange="updateRestaurants()">
                 <option value="all">All Neighborhoods</option>
             </select>           
@@ -61,14 +64,15 @@
     <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key= YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>-->
     
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>    
+     
+    
+<!--htmls5 semantic-compatible 'role landmarks' aid accessibility devices-->
+    <footer id="footer" role="contentinfo">
 
-    <footer id="footer">
-       
-<!--divided footer into 3 css selectors to be more accessible, simpler, cleaner for all users-->
-       
+<!--divided footer into 3 css selectors to be more accessible, simpler, cleaner for all users-->       
         <a href="/" class="footerButton">Restaurant Reviews</a>
-        <p class="copyright">Copyright (c) 2017 All Rights Reserved</p>
-        
+        <p class="copyright">Copyright (c) 2017 All Rights Reserved</p>        
     </footer>  
+    
 </body>
 </html>

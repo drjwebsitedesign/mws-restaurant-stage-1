@@ -200,14 +200,62 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
 
+
+
+// {/* <script src="js/main.js" type="application/javascript" charset="utf-8"></script> */}
+
+/**
+ * The following code blocks prepares the serviceWorker's 'Life Cycle' to 
+ * execute its browser support, registration, installation, activation, 
+ * and fetch functions inside the browser(navigator).  
+ * Search for which browsers support the 'serviceWorker' functions @ canIuse.com .
+ */
+
+//verify whether this browser(navigator) supports 'serviceWorker technology'.
+if(navigator.serviceWorker){
+  console.log('1.This browser DOES support serviceWorker technology.');      
+
+    //Add an '(evt)load function' to register the serviceWorker, after the window loads.    
+    window.addEventListener('load', function() {navigator.serviceWorker
+              
+          //add a '.register()method' to register the serviceWorker, and, a '.then() 
+          //method to add a promise for a callback. 
+          .register('../sw.js').then(function(reg){ 
+              console.log('2a.The serviceWorker is now registered, and, has a promise for a callback.')
+            })
+          //Add .catch() with an 'ERROR MESSAGE' for the user in case .register() fails to register.
+          // .catch(err => console.log(`2b.serviceWorker error message: ${err}`));
+          // })
+          .catch(function(err){
+            console.log(`2b.serviceWorker error message: ${err}`)
+          });
+    })
+}
+
+
+
+
+
+
+/** PER: MOHAMMED RIIAD WALKTHTROUGH
+ * Add The service worker .
+ */
+
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('./js/sw/sw.js')
+//   .then((reg) => {
+//     // registration worked
+//     if(reg.installing) {
+//       console.log('Service worker installing');
+//     } else if(reg.waiting) {
+//       console.log('Service worker installed');
+//     } else if(reg.active) {
+//       console.log('Service worker active');
+// }
+//     console.log('Registration succeeded. Scope is ' + reg.scope);
+//   }).catch((error) => {
+//     // registration failed
+//     console.log('Registration failed with ' + error);
+//   });
+// }
