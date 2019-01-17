@@ -23,7 +23,6 @@ Below are the some of the changes made to pass the project's rubric requirements
 * i divided the css3 styles into 3 different screen viewport sizes: smartphone, tablet, and desktop.
 * the footer is divided into to 3 different css3 selectors to improve responsive web design and user accessibility.
 * i used css3 properties such as flexbox, order stacking, nth-child, etc to make fluid and control the flow of content and the container-boxes.
-* i removed the footer from the details page to use less real estate because the footer and the header both lead back to the home page.
 
 ### Accessibility
 * added class="breadcrumbNav" as the navigation link inside the smartphone @media query design on restaurant.html. that helps reduce extra clicks, redundancy, and real estate used. it was modified with styles.css(display:none;). however, i did return the original 'nav h1' to the tablet and desktop screens.
